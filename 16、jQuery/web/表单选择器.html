@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单选择器</title>
+    <style type="text/css">
+        #shiseqi{
+            background-color: white;
+            width: 60px;
+            height: 30px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        //表单选择器：$(":type属性值"),如 $(":text")
+        function fun1() {
+            var obj = $(":button").val();
+            alert(obj);
+        }
+        function fun2() {
+            var obj = $(":text").val();
+            alert(obj);
+        }
+        function fun3() {
+            var obj = $(":search").val();
+            alert(obj);
+        }
+        function fun4() {
+            var obj = $(":checkbox");
+            for (var i=0;i < obj.length;i++){
+                alert(obj[i].value);
+            }
+        }
+        function fun5() {
+            var obj = $(":radio");
+            for (var i=0;i < obj.length;i++){
+                alert(obj[i].value);
+            }
+        }
+        function fun6() {
+            var obj = $(":password").val();
+            alert(obj);
+        }
+        function fun7() {
+            var obj = $(":number").val();
+            alert(obj);
+        }
+        function fun8() {
+            var obj = $(":week").val();
+            alert(obj);
+        }
+        function fun9() {
+            var obj = $(":color");
+        }
+
+        function f10() {
+            var obj = $(":text");
+            obj.val("hello")
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <form>
+            text<input type="text" value="文本框" disabled /><br>
+            search<input type="search" value="查询框" /><br>
+            checkbox<input type="checkbox" value="烫头" />烫头<input type="checkbox" value="泡吧" />泡吧<input type="checkbox" value="嫖妓" />嫖妓<br>
+            radio<input type="radio" value="♂" />男<input type="radio" value="♀" />女<br>
+            password<input type="password" value="密码框" /><br>
+            number<input type="number"><br>
+            week<input type="week" value="星期" /><br>
+            date<input type="date" value="日期"><br>
+            color<input type="color" value="拾色器" id="shiseqi" /><br>
+
+            <br>
+            <select>
+                <option value="java" selected>java</option>
+                <option value="python">python</option>
+                <option value="go">go</option>
+            </select><br><br>
+
+            神奇按钮在这里：
+            <input type="button" value="神奇按钮button" onclick="fun1()">
+            <input type="button" value="神奇按钮text" onclick="fun2()">
+            <input type="button" value="神奇按钮search" onclick="fun3()">
+            <input type="button" value="神奇按钮checkbox" onclick="fun4()">
+            <input type="button" value="神奇按钮radio" onclick="fun5()">
+            <input type="button" value="神奇按钮password" onclick="fun6()">
+            <input type="button" value="神奇按钮number" onclick="fun7()">
+            <input type="button" value="神奇按钮week" onclick="fun8()">
+            <input type="button" value="神奇按钮date" onclick="fun8()">
+            <input type="button" value="神奇按钮color" onclick="fun9()"><br>
+
+            <input type="button" value="你是阿刁" onclick="f10()">
+        </form>
+    </center>
+</body>
+</html>

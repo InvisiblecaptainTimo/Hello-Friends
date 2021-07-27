@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器</title>
+    <style type="text/css">
+        div{
+            background-color: cadetblue;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        //id选择器：$("#dom对象id")
+        function fun1() {
+            var object = $("#div1");
+            object.css("background","red");//css()是jQuery中的函数，用于改变样式
+        }
+        //class选择器：$(".class样式名")
+        function fun2() {
+            var object = $(".div2");
+            object.css("background","yellow")
+        }
+        //标签选择器：$("标签名")
+        function fun3() {
+            var object = $("div");
+            object.css("background","blue")
+        }
+        //所有选择器：$("*")
+        //组合选择器：$("以上任何选择器","以上任何选择器")
+        
+    </script>
+</head>
+<body>
+    <center>
+        <div id="div1">有id的div1</div><br>
+        <div class="div2">有class样式的div2</div><br>
+        <div>只有样式的div3</div><br>
+
+        <input type="button" value="id选择器操控div1" onclick="fun1()"><br><br>
+        <input type="button" value="class样式选择器操控div2" onclick="fun2()"><br><br>
+        <input type="button" value="标签选择器操控所有带div标签的" onclick="fun3()"><br><br>
+    </center>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <script type="text/javascript" src="jquery-3.6.0.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#btn").click(function () {
+                    alert("hello")
+                });
+            });
+/*
+    1、$(document)：$是jQuery中的函数，document是形参。整个作用是将document对象变成jQuery库可使用的对象。
+    2、ready：jQuery中的函数，表示界面加载完成后要执行的内容。
+    3、function（）：自定义函数，表示被执行的内容。
+    整个意思：调用jQuery的$函数，得到jQuery可使用的对象，然后再调用ready函数，执行页面加载完成后要执行的自定义内容。整个函数去掉function也一样。
+*/
+            $(document).ready(function () {
+                alert("jquery标准写法")
+            });
+
+            $(function () {
+                alert("jquery 简写");
+            });
+
+            $(
+                alert("傻逼")
+            )
+        </script>
+</head>
+<body>
+    <input type="button" name="btn" value="按钮" id="btn" />
+</body>
+</html>

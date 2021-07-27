@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom对象转换为jQuery对象</title>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        function bton() {
+            alert("dom对象"+document.getElementById("button").value);
+
+            alert("jQuery对象"+$(
+                document.getElementById("button")
+            ).val())
+        }
+
+        //jQuery对象本质是一个包含了dom对象的数组。
+        //所以$()表示将dom对象转换为jQuery对象，而$()[0]取下标就表示取jQuery数组中的一个dom对象，即转换为了dom对象，所以取了下标就只能用value属性取值
+        //val() 是jQuery的取值函数。
+        function clickA() {
+            alert($("#textA").val());
+            alert($("#textA")[0].value);
+            alert("这个数的平方是："+$("#textA").val()*$("#textA")[0].value)
+        }
+    </script>
+</head>
+<body>
+<center>
+    <input type="button" value="我是按钮" id="button" onclick="bton()" /><br>
+    <input type="text" id="textA" value="整数" />
+    <input type="button" value="按钮A" onclick="clickA()">
+</center>
+</body>
+</html>

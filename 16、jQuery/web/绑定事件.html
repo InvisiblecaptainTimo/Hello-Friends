@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        function fun1() {
+            var obj = $("#btn");
+            obj.click(function () {
+                alert("hello")
+            })
+        }
+
+        $(function () {
+            $("#btn").click(function () {
+                alert("你好")
+            })
+        });
+
+        $(function () {
+            $("#btn").click(function () {
+                $("*").css("background","green")
+            })
+        })
+    </script>
+</head>
+<body>
+    <center>
+        <input type="button" value="按钮" id="btn" onclick="fun1()" />
+    </center>
+</body>
+</html>

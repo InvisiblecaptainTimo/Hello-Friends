@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+    <style type="text/css">
+        div{
+            background-color: teal;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        function fun1() {
+            var obj = $("div");
+            obj.css("background","red")
+        }
+        function fun2() {
+            var obj = $("div:first");
+            obj.css("background","yellow")
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <div>div1</div>
+        <div>div2</div>
+        <div>div3</div>
+        <div>div4</div>
+        <div>div5</div>
+        <input type="button" value="操作所有div" onclick="fun1()">
+        <input type="button" value="过滤操作div" onclick="fun2()">
+    </center>
+</body>
+</html>

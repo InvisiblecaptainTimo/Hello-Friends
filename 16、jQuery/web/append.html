@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>append</title>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn").click(function () {
+                $("div").append("<input type='button' value='append增加的document' id='newbtn'>")
+
+                $("#newbtn").on("click",function () {
+                    alert("success")
+                });
+            });
+        });
+
+        $(function () {
+            $("#btn1").click(function () {
+                $("#div").html("<h1>傻逼<h1>");
+            })
+        })
+    </script>
+</head>
+<body>
+    <center>
+        <div id="div"><h1>div</h1></div>
+        <input type="button" value="append" id="btn" /><br>
+        <input type="button" value="html" id="btn1" />
+    </center>
+</body>
+</html>

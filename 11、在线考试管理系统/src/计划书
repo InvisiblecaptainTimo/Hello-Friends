@@ -1,0 +1,19 @@
+任务：
+    用户信息注册
+    用户信息查询
+    用户信息删除
+    用户信息更新
+
+步骤：
+    创建用户信息表（用户编号(主键)、用户名、用户密码、性别、邮箱）
+        create table user(
+            userId int primary key auto_increment,
+            userName varchar(50),
+            Password varchar(50),
+            sex char(1),
+            email varchar(50)
+        )
+
+    2、在src下创建用户实体类
+    3、引入JDBC工具类，没有可以自己写
+    4、在WEB-INF下创建lib文件夹，用于存放MySQL提供的JDBC实现类的jar包*-

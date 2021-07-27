@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>each</title>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn").click(function () {
+/*                var a = [1,2,3];
+                var json = {"name":"mayiya","age":21};
+                var document = $(":text");
+                $.each(document,function (index,element) {
+                    alert(element.value)
+                });
+*/
+                $(":text").each(function (i,e) {
+                    alert(e.value)
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <center>
+        <input type="button" value="按钮" id="btn"><br>
+
+        <input type="text" value="qwe"><br>
+        <input type="text" value="asd"><br>
+        <input type="text" value="zxc"><br>
+    </center>
+</body>
+</html>

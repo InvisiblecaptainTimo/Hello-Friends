@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        function dosome1() {
+            alert($("text1").value)
+        }
+
+        function dosome2() {
+            alert(document.getElementById("text2").value)
+        }
+
+        function $(id) {
+            return document.getElementById(id);
+        }
+    </script>
+</head>
+<body>
+<center>
+    <input type="text" value="文本1" id="text1" /><br>
+    <input type="text" value="文本2" id="text2" /><br>
+    <input type="button" value="按钮1" onclick="dosome1()" /><br>
+    <input type="button" value="按钮2" onclick="dosome2()" /><br>
+</center>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#tijiao").click(function () {
+                var shengao = $("#shengao").val();
+                var tizhong = $("#tizhong").val();
+                $.ajax({
+                    url:"test",
+                    data:{"shengao":shengao,"tizhong":tizhong},
+                    dataType:"json",
+                    error:function () {
+                        alert("请求出现错误")
+                    },
+                    success:function (responseText) {
+                        alert("请求成功！");
+                        $("#bim").val(responseText);
+                    }
+                })
+            });
+        })
+    </script>
+</head>
+<body>
+    <center>
+        身高：<input type="text" id="shengao" value="cm" /><br>
+        体重：<input type="text" id="tizhong" value="Kg" /><br>
+        bim =<input type="text" id="bim" disabled /><br>
+        <input type="button" value="提交" id="tijiao">
+    </center>
+</body>
+</html>
